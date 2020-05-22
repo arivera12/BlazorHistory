@@ -1,0 +1,49 @@
+﻿@page "/"
+@inject IJSRuntime JSRuntime
+@inject HttpClient Http
+@inject IBlazorHistoryService IBlazorService
+@using Newtonsoft.Json; 
+    <h1>Blazor History API Demo</h1>
+<button @onclick=@(async() => await BlazorHistoryService.Forward())>Forward</button>
+<button @onclick=@(async() => await BlazorHistoryService.Back())>Back</button>
+<button @onclick=@(async() => await BlazorHistoryService.Go(1))>Go Forward</button>
+<button @onclick=@(async() => await BlazorHistoryService.PushState(new TestObject(), Title, Url))>PushState</button>
+<button @onclick=@(async() => await BlazorHistoryService.ReplaceState(new TestObject(), Title, Url))>ReplaceState</button>
+<button @onclick=BlazorHistoryLength>History Length</button>
+<button @onclick=@BlazorHistoryState>Get State</button>
+<button @onclick=@BlazorHistoryScrollRestoration>Get ScrollRestoration</button>
+<button @onclick=@(async() => await BlazorHistoryService.ScrollRestoration(ScrollRestorationType.Auto))>Set Auto ScrollRestoration</button>
+<button @onclick=@(async() => await BlazorHistoryService.ScrollRestoration(ScrollRestorationType.Manual))>Set Manual ScrollRestoration</button>
+<p>Current History Length:@historyCount</p>
+<p>Current History State: @JsonConvert.SerializeObject(currentState)</p>
+<p>Current History Scroll Restoration: @scrollRestorationResult</p>
+
+@functions{
+    [Inject] public IBlazorHistoryService BlazorHistoryService { get; set; }
+    string Data = "Dummy";
+    string Title = "Dummy";
+    string Url = "Blazor";
+    int historyCount = 0;
+    TestObject currentState;
+    ScrollRestorationType scrollRestorationResult;
+
+    private async Task BlazorHistoryLength()
+    {
+        historyCount = await BlazorHistoryService.Length();
+    }
+    private async Task BlazorHistoryState()
+    {
+        currentState = await BlazorHistoryService.State<TestObject>();
+        StateHasChanged();
+    }
+    private async Task BlazorHistoryScrollRestoration()
+    {
+        scrollRestorationResult = await BlazorHistoryService.ScrollRestoration();
+    }
+    public class TestObject
+    {
+        public string MyProperty1 { get; set; } = "Data";
+        public int MyProperty2 { get; set; } = 10;
+        public bool MyProperty3 { get; set; } = true;
+    }
+}

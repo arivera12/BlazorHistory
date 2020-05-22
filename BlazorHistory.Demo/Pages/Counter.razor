@@ -1,0 +1,16 @@
+﻿@page "/counter"
+@inject IJSRuntime JSRuntime
+@inject HttpClient Http
+@inject IBlazorHistoryService IBlazorService
+
+<button @onclick=@(async() => await BlazorHistoryService.Back())>Go Back</button>
+
+@code {
+    [Inject] public IBlazorHistoryService BlazorHistoryService { get; set; }
+    private int currentCount = 0;
+
+    private void IncrementCount()
+    {
+        currentCount++;
+    }
+}
