@@ -39,7 +39,7 @@ namespace BlazorHistory
         /// <returns></returns>
         ValueTask ReplaceState<T>(T stateData, string pageTitle, string url);
         /// <summary>
-        /// Returns an Integer representing the number of elements in the session history, including the currently loaded page
+        /// Returns an Integer representing the number of elements in the session history, including the currently loaded page.
         /// </summary>
         /// <returns></returns>
         ValueTask<int> Length();
