@@ -2,9 +2,11 @@
 
 [![Nuget](https://buildstats.info/nuget/BlazorHistory?v=1.0.0)](https://www.nuget.org/packages/BlazorHistory)
 
+![](BlazorHistoryDemo.gif)
+
 HTML5 Hitory API for Blazor without any JavaScript Library Dependency.
 
-This package wraps [HTML5 Storage](https://developer.mozilla.org/en-US/docs/Web/API/History) APIs. 
+This package wraps [HTML5 History](https://developer.mozilla.org/en-US/docs/Web/API/History) APIs. 
 
 ## Installation
 
