@@ -69,4 +69,4 @@ This library has no javascript library reference dependency.
 	</tr>
 </table>
 
-## MIT
+## License MIT
