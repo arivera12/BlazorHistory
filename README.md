@@ -43,30 +43,31 @@ This library has no javascript library reference dependency.
 		<td>Loads a page from the session history by index</td>
 		<td>Go(int index)</td>
 	</tr>
-  <tr>
+    <tr>
 		<td>Pushes the given data onto the session history stack</td>
 		<td>PushState<T>(T stateData, string pageTitle, string url)</td>
 	</tr>
-  <tr>
+    <tr>
 		<td>Updates the most recent entry on the history stack</td>
 		<td>ReplaceState<T>(T stateData, string pageTitle, string url)</td>
 	</tr>
-  <tr>
+    <tr>
 		<td>Returns an Integer representing the number of elements in the session history, including the currently loaded page</td>
 		<td>Length()</td>
 	</tr>
-  <tr>
+    <tr>
 		<td>Allows web applications to explicitly set default scroll restoration behavior on history navigation. This property can be either auto or manual.</td>
 		<td>ScrollRestoration(ScrollRestorationType scrollRestorationType)</td>
 	</tr>
-  <tr>
+    <tr>
 		<td>Allows web applications to explicitly get default scroll restoration behavior on history navigation. This property can be either auto or manual.</td>
 		<td>ScrollRestoration()</td>
 	</tr>
-  <tr>
+    <tr>
 		<td>Returns a T type representing the state at the top of the history stack</td>
 		<td>State<T>()</td>
 	</tr>
 </table>
 
-## License MIT
+## License
+MIT
