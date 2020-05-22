@@ -48,7 +48,7 @@ This library has no javascript library reference dependency.
 		<td>PushState<T>(T stateData, string pageTitle, string url)</td>
 	</tr>
   <tr>
-		<td>RUpdates the most recent entry on the history stack</td>
+		<td>Updates the most recent entry on the history stack</td>
 		<td>ReplaceState<T>(T stateData, string pageTitle, string url)</td>
 	</tr>
   <tr>
