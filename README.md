@@ -4,7 +4,7 @@
 
 ![](BlazorHistoryDemo.gif)
 
-HTML5 Hitory API for Blazor without any JavaScript Library Dependency.
+HTML5 History API for Blazor without any JavaScript Library Dependency.
 
 This package wraps [HTML5 History](https://developer.mozilla.org/en-US/docs/Web/API/History) APIs. 
 
