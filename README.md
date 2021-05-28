@@ -21,7 +21,7 @@ This package wraps [HTML5 History](https://developer.mozilla.org/en-US/docs/Web/
 
 ## Register the service in your services method
 
-`services.AddBlazorHistory();`
+`services.AddBlazorHistoryService();`
 
 ## No javascript library reference dependency
 
@@ -29,13 +29,13 @@ This library has no javascript library reference dependency.
 
 ## Usage
 
-`[Inject] IBlazorHistory BlazorHistory { get; set; }`
+`[Inject] IBlazorHistoryService BlazorHistory { get; set; }`
 
 ### BlazorHistory Methods
 
 <table>
 	<tr>
-		<th>BlazorHistory</th>
+		<th>BlazorHistoryService</th>
 		<th>Method</th>
 	</tr>
 	<tr>
